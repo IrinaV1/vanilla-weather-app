@@ -36,10 +36,22 @@ iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.da
 iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+function search(city){
+    let apiKey = "f9a03396395e77596cdd41ea58a7f663";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}&units=metric`;
+    console.log(apiUrl);
+    axios.get(apiUrl).then(displayTemperature);
+}
 
-let apiKey = "f9a03396395e77596cdd41ea58a7f663";
-let city = "Ukraine";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}&units=metric`;
-console.log(apiUrl);
 
-axios.get(apiUrl).then(displayTemperature);
+function heandleSubmit(event) {
+    event.preventDefault();
+    let cityInputElement = document.querySelector("#city-input");
+    search(cityInputElement.value);
+}
+
+
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", heandleSubmit);
+
