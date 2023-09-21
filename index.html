@@ -33,7 +33,7 @@
 <div class="row">
     <div class="col-6">
         <div class="d-flex weather-temperature">
-        <img src="" alt="Clear" id="icon">
+        <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="Clear" id="icon">
        <div> 
         <strong id="temperature">12</strong>
         <span class="units">
@@ -45,14 +45,29 @@
     </div>
     <div class="col-6">
         <ul>
-            <li>Precipitation: 0%</li>
+        <!--<li>Precipitation:<span id="precipitation"></span> 0%</li>-->
             <li>Humidity:<span id="humidity"> 73</span>%</li>
-            <li >Wind: <span id="wind"></span> km/h</li>
+            <li >Wind: <span id="wind">1</span> km/h</li>
         </ul>
+    </div>
+</div>
+<div class="weather-forecst">
+    <div class="row">
+        <div class="col-2">
+            <div class="weather-forecst-date">
+            Thu
+        </div>
+            <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="" width="36"/>
+      <div class="weather-forecst-temperatures">
+       <span class="weather-forecst-temperatures-max">18°</span> 
+    <span class="weather-forecst-temperatures-min">12°</span>
+</div>  
+        </div>
     </div>
 </div>
 </div>
 <small> <a href="https://github.com/IrinaV1/vanilla-weather-app" target="_blank">Open-source code</a>, by Irina Vyust</small>
+</div>
 </div>
     <script src="src/app.js"></script>
 </body>
